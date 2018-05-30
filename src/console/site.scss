@@ -19,7 +19,7 @@ body {
   @mixin consoole-font {
     font-style: normal;
     font-family: monospace;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 16px;
   }
 
@@ -28,12 +28,15 @@ body {
   }
 
   &-completion {
-    background-color: white;
+    background-color: #414a59;
 
     @include consoole-font;
 
     &-title {
-      background-color: lightgray;
+      background-color: #303642;
+      color: #f5f6f7;
+      font-size: 14px;
+      line-height: 20px;
       font-weight: bold;
       margin: 0;
       padding: 0;
@@ -44,10 +47,12 @@ body {
       background-position: 0 center;
       background-size: contain;
       background-repeat: no-repeat;
-      white-space: pre;
+      white-space: nowrap;
+      color: #f5f6f7;
+      font-size: 13px;
 
       &.vimvixen-completion-selected {
-        background-color: yellow;
+        background-color: #cc575d;
       }
 
       &-caption {
@@ -59,7 +64,7 @@ body {
 
       &-url {
         display: inline-block;
-        color: green;
+        color: #5294e2;
         width: 60%;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -86,7 +91,8 @@ body {
   }
 
   &-command {
-    background-color: white;
+    background-color: #303642;
+    color: #f5f6f7;
     display: flex;
 
     &-prompt:before {
@@ -104,6 +110,8 @@ body {
     &-input {
       border: none;
       flex-grow: 1;
+      background-color: #303642;
+      color: #f5f6f7;
 
       @include consoole-font;
     }
