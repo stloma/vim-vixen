@@ -18,7 +18,7 @@ body {
 
   @mixin consoole-font {
     font-style: normal;
-    font-family: monospace;
+    font-family: DejaVu Sans;
     font-size: 14px;
     line-height: 16px;
   }
@@ -52,7 +52,7 @@ body {
       font-size: 13px;
 
       &.vimvixen-completion-selected {
-        background-color: #cc575d;
+        background-color: #5294e2;
       }
 
       &-caption {
@@ -64,7 +64,7 @@ body {
 
       &-url {
         display: inline-block;
-        color: #5294e2;
+        color: #cc575d;
         width: 60%;
         text-overflow: ellipsis;
         overflow: hidden;
