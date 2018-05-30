@@ -1,6 +1,7 @@
 export default {
   source: 'json',
   json: `{
+{
   "keymaps": {
     "0": { "type": "scroll.home" },
     ":": { "type": "command.show" },
@@ -16,18 +17,17 @@ export default {
     "j": { "type": "scroll.vertically", "count": 1 },
     "h": { "type": "scroll.horizonally", "count": -1 },
     "l": { "type": "scroll.horizonally", "count": 1 },
-    "<C-U>": { "type": "scroll.pages", "count": -0.5 },
-    "<C-D>": { "type": "scroll.pages", "count": 0.5 },
+    "<C-U>": { "type": "scroll.pages", "count": -0.3 },
+    "<C-D>": { "type": "scroll.pages", "count": 0.3 },
     "<C-B>": { "type": "scroll.pages", "count": -1 },
-    "<C-F>": { "type": "scroll.pages", "count": 1 },
     "gg": { "type": "scroll.top" },
     "G": { "type": "scroll.bottom" },
     "$": { "type": "scroll.end" },
     "d": { "type": "tabs.close" },
     "!d": { "type": "tabs.close.force" },
     "u": { "type": "tabs.reopen" },
-    "K": { "type": "tabs.prev", "count": 1 },
-    "J": { "type": "tabs.next", "count": 1 },
+    "<A-h>": { "type": "tabs.prev", "count": 1 },
+    "<A-l>": { "type": "tabs.next", "count": 1 },
     "gT": { "type": "tabs.prev", "count": 1 },
     "gt": { "type": "tabs.next", "count": 1 },
     "g0": { "type": "tabs.first" },
@@ -40,8 +40,8 @@ export default {
     "zi": { "type": "zoom.in" },
     "zo": { "type": "zoom.out" },
     "zz": { "type": "zoom.neutral" },
-    "f": { "type": "follow.start", "newTab": false },
-    "F": { "type": "follow.start", "newTab": true, "background": false },
+    "f": { "type": "follow.start", "newTab": false, "background": false },
+    "F": { "type": "follow.start", "newTab": true, "background": true },
     "H": { "type": "navigate.history.prev" },
     "L": { "type": "navigate.history.next" },
     "[[": { "type": "navigate.link.prev" },
@@ -59,14 +59,17 @@ export default {
     "<S-Esc>": { "type": "addon.toggle.enabled" }
   },
   "search": {
-    "default": "google",
+    "default": "go",
     "engines": {
-      "google": "https://google.com/search?q={}",
-      "yahoo": "https://search.yahoo.com/search?p={}",
-      "bing": "https://www.bing.com/search?q={}",
-      "duckduckgo": "https://duckduckgo.com/?q={}",
-      "twitter": "https://twitter.com/search?q={}",
-      "wikipedia": "https://en.wikipedia.org/w/index.php?search={}"
+      "go": "https://google.com/search?q={}",
+      "ddg": "https://duckduckgo.com/?q={}",
+      "wp": "https://en.wikipedia.org/w/index.php?search={}",
+      "aw": "https://wiki.archlinux.org/?search={}",
+      "az": "https://www.amazon.com/s?url=search-alias%3Daps&field-keywords={}",
+      "rd": "https://www.reddit.com/r/{}",
+      "yt": "https://www.youtube.com/results?search_query={}"
+
+
     }
   },
   "properties": {
